@@ -1,0 +1,9 @@
+SetHandler fcgid-script
+Options +ExecCGI
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ server.fcgi [QSA,L]
+RewriteBase /
+
