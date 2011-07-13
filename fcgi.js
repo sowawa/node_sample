@@ -61,7 +61,7 @@ var handleConnection = function(result, server) {
 				request.req.httpVersion = request.req.httpVersionMajor + "." + request.req.httpVersionMinor;
 	
 				request.req.url = request.req.headers.request_uri;
-				request.req.method = request.req.request_method;
+				request.req.method = request.req.headers.request_method;
 				
 				request.res = new http.ServerResponse(request.req);
 				
